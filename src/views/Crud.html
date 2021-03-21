@@ -1,0 +1,54 @@
+{% extends "index.html"%}
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 ">
+            <table class="table">
+                <thead class="table-dark">
+                    <th>#id</th>
+                    <th>Nombre Producto</th>
+                    <th>Categoria</th>
+    
+                </thead>
+                <tbody>
+                    {% for item in data %}
+                        <tr>
+                            <td>{{item.id}}</td>
+                            <td>{{item.nombre}}</td>
+                            <td>{{item.categoria}}</td>
+                        </tr>                       
+                    {% endfor %}
+                </tbody>
+            </table>
+    
+        </div>
+        <div class="col-md-4 ">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/user/add" method="POST">
+                        <div class="mb-3">
+                            <label for="NombreProducto" class="form-label">Nombre:</label>
+                            <input type="text" name='nombre' class="form-control" id="NombreProducto" placeholder="Nombre Producto">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Categoria" class="form-label">Categoria</label>
+                            <input type="text" name="categoria" class="form-control" id="Categoria" placeholder="Categoria">
+                        </div>
+                        <div class="mb-3">
+                            <input type="submit" class="form-control btn btn-success" id="Categoria"
+                                placeholder="Categoria">
+                        </div>
+                    </form>
+                </div>
+            </div>
+    
+    
+        </div>
+    </div>
+    
+</div>
+
+
+
+{% endblock %}
