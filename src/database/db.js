@@ -1,17 +1,17 @@
 const db=[
     {
         id:1,
-        nombre:'Francisco Jimenez',
+        nombre:'Quesos Jimenez',
         categoria:'Lacteos'
     },
     {
         id:2,
-        nombre:'Adrian Jimenez',
+        nombre:'Leche Jimenez',
         categoria:'Lacteos'
     },
     {
         id:3,
-        nombre:'Grisell Jimenez',
+        nombre:'Yogur Jimenez',
         categoria:'Lacteos'
     }
 ]
